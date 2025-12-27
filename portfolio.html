@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Portfolio of Abayomi Joshua — Copywriting, Content Writing, Blog & Article Writing. Strategic storytelling that converts." />
+    <title>Abayomi Joshua — Copywriter & Content Strategist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>AJ</text></svg>">
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --muted: #94a3b8;
+            --accent1: #7c3aed;
+            --accent2: #06b6d4;
+            --glass: rgba(255, 255, 255, 0.04);
+            --radius: 14px;
+            --max-width: 1100px;
+            --mono: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--mono);
+            background: linear-gradient(180deg, var(--bg) 0%, #071022 60%);
+            color: #e6eef8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.45;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 28px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent1), var(--accent2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 6px 18px rgba(12, 15, 25, 0.6);
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn {
+            padding: 10px 14px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--accent2), var(--accent1));
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .linkedin {
+            font-size: xx-large;
+            cursor: pointer;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 28px;
+            align-items: center;
+            padding: 48px 0;
+        }
+
+        .hero-left h1 {
+            font-size: 40px;
+            margin: 0 0 8px;
+        }
+
+        .eyebrow {
+            color: var(--accent2);
+            font-weight: 700;
+            font-size: large;
+            letter-spacing: 0.6px;
+        }
+
+        .role {
+            color: var(--muted);
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #d9e6f5;
+            max-width: 70%;
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .card-cta {
+            background: var(--glass);
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .act {
+            color: white;
+            font-weight: 600;
+            border: 2px solid var(--accent2);
+        }
+
+        .stats {
+            display: flex;
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .stat {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 18px;
+        }
+
+        .stat span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .hero-right {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.015));
+            padding: 22px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 260px;
+            border-radius: 10px;
+            object-fit: cover;
+            background: linear-gradient(135deg, var(--accent1), var(--accent2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 32px;
+        }
+
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .badge {
+            padding: 8px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.03);
+            font-weight: 700;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        section {
+            padding: 48px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        h2 {
+            margin: 0 0 14px;
+        }
+
+        .subtle {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+
+        .work-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent);
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .work-card:hover {
+            background: linear-gradient(180deg, rgb(55, 53, 70), transparent);
+            ;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .work-card h3 {
+            margin: 0 0 8px;
+        }
+
+        .work-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 6px 8px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.02);
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .test {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .cta-row .active {
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            color: #e9eef8;
+            font-weight: 600;
+
+        }
+
+        .cta-row .card-cta:hover {
+            transform: scale(1.03);
+        }
+
+        .post {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 12px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .post .meta {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 18px;
+        }
+
+        form {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent);
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0 6px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: transparent;
+            color: inherit;
+        }
+
+        .small {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        footer {
+            padding: 28px 0;
+            color: var(--muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        @media (max-width:880px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 460px) {
+            .container {
+                max-width: var(--max-width);
+                margin: 0 auto;
+                padding: 10px 20px;
+            }
+
+            .post {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .work-card {
+                width: 100%;
+            }
+
+            .work-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+
+            }
+
+            .blog-list {
+                width: 100%;
+            }
+
+            .post {
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .post:hover {
+                background-color: #023038;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        a.pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #06b6d4;
+            font-size: large;
+            font-weight: 600;
+        }
+
+        .topic h3 {
+            font-size: large;
+            font-weight: 500;
+        }
+
+        .see {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+
+        }
+
+        span#seemore {
+            display: none;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 6px 18px rgba(12, 15, 25, 0.6);
+            background-color: #06b6d4;
+            color: white;
+            align-content: center;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        span#seemore:hover {
+            background: #023038;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">AJ</div>
+                <div>
+                    <div style="font-weight:800">Abayomi Joshua</div>
+                    <div style="color:var(--muted);font-size:13px">Copywriter • Content Writer • Blogger</div>
+                </div>
+            </div>
+            <nav>
+                <a href="#work">Work</a>
+                <a href="#blog">Projects</a>
+                <a href="#contact">Contact</a>
+                <a class="btn" href="#contact">Hire me</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-left fade-in" id="intro">
+                    <div class="eyebrow" id="heroEyebrow">Strategic copy & content that engages</div>
+                    <h1 id="heroTitle">Crafting words that tell stories, build trust, and convert.</h1>
+                    <div class="role" id="heroRole">I specialize in copywriting, content writing, blog posts, and
+                        articles that help
+                        brands connect with their audience.</div>
+                    <p class="lead" id="heroLead">From compelling product copy to SEO-driven articles and engaging blog
+                        posts, I
+                        deliver content that boosts engagement, strengthens brand voice, and drives measurable results.
+                    </p>
+
+                    <div class="cta-row">
+                        <a class="card-cta active" href="#contact">Request a brief</a>
+                        <a class="card-cta act" href="#blog">See Projects</a>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat"><strong>4</strong><span>Articles & Blogs Published</span></div>
+                        <div class="stat"><strong>40%</strong><span>Average Engagement Increase</span></div>
+                        <div class="stat"><strong>2+</strong><span>Years Experience</span></div>
+                    </div>
+                </div>
+
+                <aside class="hero-right fade-in">
+                    <img id="profileImg" src="./WhatsApp Image 2025-09-21 at 1.00.40 PM.jpeg" class="profile-img">
+                    <div id="profileName" style="margin-top:12px;font-weight:800">Abayomi Joshua</div>
+                    <div id="profileDesc" class="small" style="margin-top:6px">Professional copywriter and content
+                        creator helping brands
+                        craft compelling messages across platforms.</div>
+                    <div class="skill-badges" id="skillList">
+                        <div class="badge">Copywriting</div>
+                        <div class="badge">Content Writing</div>
+                        <div class="badge">Blog & Articles</div>
+                        <div class="badge">SEO Copy</div>
+                        <div class="badge">Content Strategy</div>
+                    </div>
+                </aside>
+            </section>
+
+            <section id="work">
+                <h2 id="workSectionTitle">Selected Work</h2>
+                <div class="subtle" id="workSectionDesc">Showcasing my copywriting and content projects</div>
+                <div class="work-grid" id="workList">
+                    <article class="work-card fade-in" id="work1">
+                        <h3 id="work1Title">Real Estate Investment Insights</h3>
+                        <p id="work1Desc">In-depth article breaking down real estate investment strategies, market
+                            evaluation, and risk considerations to help investors make informed, profit-driven
+                            decisions.</p>
+                        <div class="tag" id="work1Tag">Content Writing • Finance • Real Estate</div>
+                    </article>
+
+                    <article class="work-card fade-in" id="work2">
+                        <h3 id="work2Title">Smart Budgeting with Credit Cards</h3>
+                        <p id="work2Desc">Educational content explaining how to use credit cards responsibly for
+                            budgeting, cash flow control, and financial growth without falling into debt traps.</p>
+                        <div class="tag" id="work2Tag">Personal Finance • Financial Education • Content Writing</div>
+                    </article>
+
+                    <article class="work-card fade-in" id="work3">
+                        <h3 id="work3Title">Understanding Digital Banking Systems</h3>
+                        <p id="work3Desc">Well-researched article exploring how digital banking platforms work,
+                            including security layers, user experience, and modern financial infrastructure.</p>
+                        <div class="tag" id="work3Tag">Fintech • Digital Banking • Educational Content</div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- <section id="case-studies">
+                <h2>Case Study — SEO Blog Series</h2>
+                <div class="subtle">A content campaign that improved organic traffic by 42% in 3 months</div>
+                <div style="display:grid;grid-template-columns:1fr 320px;gap:18px">
+                    <div>
+                        <h3>Challenge</h3>
+                        <p class="small">A lifestyle brand needed a consistent blog series to improve search rankings
+                            and audience engagement.</p>
+                        <h3>Approach</h3>
+                        <ul class="small">
+                            <li>Keyword research and SEO optimization</li>
+                            <li>Crafting engaging articles aligned with brand voice</li>
+                            <li>Content calendar and publication strategy</li>
+                        </ul>
+                        <h3>Results</h3>
+                        <p class="small">Organic traffic increased 42%, with improved dwell time and repeat readership.
+                            Articles became reference points for the niche audience.</p>
+                    </div>
+                    <aside>
+                        <div class="work-card">
+                            <h4>Deliverables</h4>
+                            <div class="small">Content briefs, SEO-optimized articles, editorial calendar, and analytics
+                                reporting.</div>
+                        </div>
+                    </aside>
+                </div>
+            </section> -->
+
+            <section id="blog">
+                <h2 id="blogSectionTitle">Featured Articles</h2>
+                <div class="subtle" id="blogSectionDesc">Recent content pieces demonstrating thought leadership</div>
+                <div class="blog-list" id="blogList">
+                    <!-- <article class="post fade-in" id="blog1">
+                        <div style="flex:1">
+                            <h3 id="blog1Title">RealEstate_Investment Article</h3>
+                            <div class="meta">Sep 10, 2025 • 15 min read</div>
+                        </div>
+                        <a id="blog1Link"
+                            href="https://drive.google.com/drive/folders/1xY8lGFYqDaTazf46n1tPilFIQRL9WUPD"
+                            class="pill">Read →</a>
+                    </article>
+                    <article class="post fade-in" id="blog2">
+                        <div style="flex:1">
+                            <h3 id="blog2Title">SmartBudgeting_with_CreditCards</h3>
+                            <div class="meta">June 21, 2025 • 10 min read</div>
+                        </div>
+                        <a id="blog2Link"
+                            href="https://drive.google.com/drive/folders/1gR6eRbCI6hPzWdDWCyzrbDZtKOIqFqUd"
+                            class="pill">Read →</a>
+                    </article>
+                    <article class="post fade-in" id="blog3">
+                        <div style="flex:1">
+                            <h3 id="blog3Title">Understanding_Digital_Banking_Systems<h3>
+                                    <div class="meta">July 30, 2025 • 15 min read</div>
+                        </div>
+                        <a id="blog3Link"
+                            href="https://drive.google.com/drive/folders/151EBAwigwPvPJ2YeLjINXcBtM2pR_yqK"
+                            class="pill">Read →</a>
+                    </article>
+                    <article class="post fade-in" id="blog4">
+                        <div style="flex:1">
+                            <h3 id="blog4Title">Estate Listing and Description</h3>
+                            <div class="meta">July 21, 2025 • 10 min read</div>
+                        </div>
+                        <a id="blog4Link"
+                            href="https://drive.google.com/drive/folders/18hxjDGIseaLzC4zZYP1WY-xhmVclnTDj"
+                            class="pill">Read →</a>
+                    </article>
+                    <article class="post fade-in" id="blog5">
+                        <div style="flex:1">
+                            <h3 id="blog5Title">Website Copy</h3>
+                            <div class="meta">Aug 21, 2025 • 10 min read</div>
+                        </div>
+                        <a id="blog5Link"
+                            href="https://drive.google.com/drive/folders/1rofxp3JNq1SwKiCRiAExsDpug6YwRbKp"
+                            class="pill">Read →</a>
+                    </article> -->
+                </div>
+                <div class="see">
+                    <span class="seemore" id="seemore">SEE MORE</span>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2 id="contactTitle">Contact & Availability</h2>
+                <div class="subtle" id="contactDesc">Open to project collaborations. Let's create content that converts.
+                </div>
+                <div class="contact-grid">
+                    <form id="contactForm" action="https://formspree.io/f/xyzngdnb" method="post" name="form"
+                        onsubmit="return handleSubmit(event)">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" required placeholder="Your name">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="you@company.com">
+                        <label for="type">Project type</label>
+                        <select id="type" name="type">
+                            <option>Copywriting</option>
+                            <option>Content Writing</option>
+                            <option>Blog / Article</option>
+                            <option>Full Content Strategy</option>
+                        </select>
+                        <label for="message">Brief</label>
+                        <textarea id="message" name="message" rows="6"
+                            placeholder="Short brief — goals, timeline, budget (optional)"></textarea>
+                        <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
+                            <button class="btn" type="submit">Send brief</button>
+                            <div class="small">Or email: <strong id="contactEmail" style="color:#fff">
+                                    abayomiayodeji066@gmail.com || </strong><a id="contactLinkedin"
+                                    href="https://www.linkedin.com/in/abayomi-joshua-551b53287"><strong
+                                        class="bx bxl-linkedin linkedin"></strong></a>
+                            </div>
+                        </div>
+                    </form>
+
+                    <aside
+                        style="background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px">
+                        <h4>Quick stats</h4>
+                        <ul class="small">
+                            <li>Average turnaround: 3–7 days per content piece</li>
+                            <li>Specialities: Copywriting, SEO, Blog & Articles</li>
+                            <li>Deliverables: Copy deck, SEO briefs, Tone guide</li>
+                        </ul>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+                <div class="small">© <strong>Abayomi Joshua</strong> — Copywriting & Content • 2025</div>
+                <div class="small">Built with strategy-focused copy and content expertise.</div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const ids = [
+                "heroEyebrow", "heroTitle", "heroRole", "heroLead", "profileName", "profileDesc",
+                "workSectionTitle", "workSectionDesc",
+                "servicesTitle", "servicesDesc",
+                "blogSectionTitle", "blogSectionDesc",
+                "contactTitle", "contactDesc", "contactEmail", "contactLinkedin"
+            ];
+
+            ids.forEach(id => {
+                const val = localStorage.getItem(id);
+                const el = document.getElementById(id);
+                if (val && el) el.textContent = val;
+            });
+
+            const profileImg = document.getElementById("profileImg");
+            const savedImg = localStorage.getItem("profileImg");
+            if (savedImg) profileImg.src = savedImg;
+
+            ["workList", "blogList", "servicesList"].forEach(listID => {
+                const listData = localStorage.getItem(listID);
+                if (listData && document.getElementById(listID)) {
+                    document.getElementById(listID).innerHTML = listData;
+                }
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') })
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                const href = a.getAttribute('href');
+                if (href.length > 1) { e.preventDefault(); document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            })
+        })
+
+        const RVform = document.getElementById("contactForm");
+
+        RVform.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(RVform);
+
+            const response = await fetch(RVform.action, {
+                method: "POST",
+                body: formData,
+                headers: { "Accept": "application/json" }
+            });
+
+            if (response.ok) {
+                alert("✅ Thanks — we received your contacting us!");
+                RVform.reset();
+            } else {
+                alert("❌ Something went wrong. Please try again.");
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
